@@ -1,0 +1,472 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Taufq | Graphic Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .work-item:hover .work-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .work-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .active:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter">TAUFIQ</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-900 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
+            <a href="#home" class="block py-2 nav-link active">Home</a>
+            <a href="#work" class="block py-2 nav-link">Work</a>
+            <a href="#about" class="block py-2 nav-link">About</a>
+            <a href="#contact" class="block py-2 nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Visual Stories <br>That <span class="text-indigo-600">Inspire</span></h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-700">I craft bold, meaningful designs that connect brands with their audiences.</p>
+                <div class="flex space-x-4">
+                    <a href="#work" class="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition duration-300">View Work</a>
+                    <a href="#contact" class="border-2 border-black px-8 py-3 rounded-full font-medium hover:bg-black hover:text-white transition duration-300">Get in Touch</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-80 h-80 md:w-96 md:h-96 bg-indigo-100 rounded-full overflow-hidden shadow-xl">
+                    <img
+                         src="<a href="https://ibb.co/LDHcVvT5"><img src="https://i.ibb.co/CpDYRWj2/Picsart-25-04-28-23-37-48-245.jpg" alt="Picsart-25-04-28-23-37-48-245" border="0"></a>" 
+                         alt="Designer Portrait" 
+                         class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Selected <span class="text-indigo-600">Projects</span></h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">A curated selection of my most impactful design work across various mediums and industries.</p>
+            </div>
+            
+            <!-- Work Filter -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-full bg-gray-100 p-1">
+                    <button class="filter-btn active px-6 py-2 rounded-full font-medium" data-filter="all">All</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium" data-filter="branding">Branding</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium" data-filter="digital">Digital</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium" data-filter="print">Print</button>
+                </div>
+            </div>
+            
+            <!-- Work Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="work-item group relative overflow-hidden rounded-xl shadow-lg" data-category="digital">
+                    <img src="<a href="https://ibb.co/7xCzG6cd"><img src="<a href="https://ibb.co/39Y1zVfS"><img src="https://i.ibb.co/JwFnQ8xr/Picsart-24-11-26-22-01-06-501.jpg" alt="Picsart-24-11-26-22-01-06-501" border="0"></a>
+                    <div class="work-overlay absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Puma Sneakers</h3>
+                        <p class="text-gray-300 mb-4">A Horizontal Banner</p>
+                        <a href="#" class="text-white font-medium inline-flex items-center">
+                           
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="work-item group relative overflow-hidden rounded-xl shadow-lg" data-category="print">
+                    <img src="<a href="https://ibb.co/0yy0tPBF"><img src="https://i.ibb.co/VYYFmXHQ/Picsart-24-11-26-20-08-18-042.jpg" alt="Picsart-24-11-26-20-08-18-042" border="0"></a>
+                         
+                    <div class="work-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Prime Drink</h3>
+                        <p class="text-gray-300 mb-4">A Vertical Poster</p>
+                        <a href="#" class="text-white font-medium inline-flex items-center">
+                            
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="work-item group relative overflow-hidden rounded-xl shadow-lg" data-category="print">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                         alt="Editorial Design Project" 
+                         class="w-full h-80 object-cover">
+                    <div class="work-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Modernist Quarterly</h3>
+                        <p class="text-gray-300 mb-4">Editorial design for an art and culture magazine</p>
+                        <a href="#" class="text-white font-medium inline-flex items-center">
+                            
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="work-item group relative overflow-hidden rounded-xl shadow-lg" data-category="branding">
+                    <img src="<a href= https://ibb.co/RTv9XCCD"><img src="https://i.ibb.co/yFfXz88Q/IMG-20230711-203138-413.jpg" alt="IMG-20230711-203138-413" border="0"></a>
+                     
+                    <div class="work-overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Boat Headphone</h3>
+                        <p class="text-gray-300 mb-4">A Horizontal Banner</p>
+                        <a href="#" class="text-white font-medium inline-flex items-center">
+                            
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="work-item group relative overflow-hidden rounded-xl shadow-lg" data-category="digital">
+                    <img src="<a href="https://ibb.co/Pv1wXHLq"><img src="https://i.ibb.co/sdsyxYf8/Picsart-24-11-26-14-48-28-795.jpg" alt="Picsart-24-11-26-14-48-28-795" border="0"></a>
+                     
+                    <div class="work-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Special Noodels</h3>
+                        <p class="text-gray-300 mb-4">A Horizontal Banner</p>
+                        <a href="#" class="text-white font-medium inline-flex items-center">
+                            
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="work-item group relative overflow-hidden rounded-xl shadow-lg" data-category="print">
+                    <img src="<a href="https://ibb.co/kVRz4Lzb"><img src="https://i.ibb.co/qLthNHhq/Picsart-24-11-26-20-54-22-000.jpg" alt="Picsart-24-11-26-20-54-22-000" border="0"></a>
+                         
+                    <div class="work-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Juice Centre</h3>
+                        <p class="text-gray-300 mb-4">A Vertical Poster</p>
+                        <a href="#" class="text-white font-medium inline-flex items-center">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-black font-medium text-lg">
+                    View Full Portfolio <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">About <span class="text-indigo-600">Me</span></h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        I'm Taufiq, a multidisciplinary graphic designer with over 2 years of experience creating visual identities that resonate. My approach combines strategic thinking with aesthetic sensibility to deliver designs that are both beautiful and effective.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8">
+                        After graduating from the Degree of Mass Media, I've worked with startups, agencies, and global brands to craft memorable brand experiences across print and digital mediums.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="bg-gray-200 px-4 py-2 rounded-full font-medium">Brand Strategy</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full font-medium">Art Direction</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full font-medium">Typography</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full font-medium">UI/UX</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/16fnkY_M55aZu_lcNqdjTTv4XkgbkwJmy/view?usp=drivesdk" target="_blank" class="inline-flex items-center text-black font-medium text-lg">
+    Download CV <i class="fas fa-download ml-2"></i>
+</a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-indigo-100 p-8 rounded-xl">
+                            <i class="fas fa-book-open text-4xl text-indigo-600 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Always Learning</h3>
+                            <p class="text-gray-700">Continuously improving skills in design and video editing.</p>
+                        </div>
+                        <div class="bg-gray-100 p-8 rounded-xl">
+                           <i class="fas fa-briefcase text-4xl text-indigo-600 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">2+ Years</h3>
+                            <p class="text-gray-700">Completed creative projects for small businesses and personal brands.</p>
+                        </div>
+                        <div class="bg-gray-100 p-8 rounded-xl">
+                           <i class="fas fa-palette text-4xl text-indigo-600 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Design-Driven</h3>
+                            <p class="text-gray-700">Passionate about creating clean, meaningful visuals.</p>
+                        </div>
+                        <div class="bg-indigo-100 p-8 rounded-xl">
+                            <i class="fas fa-seedling text-4xl text-indigo-600 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Building the Future</h3>
+                            <p class="text-gray-700">Focused on growing into a full-time UGC and creative content expert.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Client <span class="text-indigo-600">Testimonials</span></h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">What people I've worked with say about my work and process.</p>
+            </div>
+           
+   <div class="bg-gray-50 p-8 rounded-xl">
+  <div class="flex items-center mb-4">
+    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+      <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+           alt="Indian Man Portrait" 
+           class="w-full h-full object-cover object-center">
+    </div>
+    <div>
+      <h4 class="font-bold">Sourav</h4>
+      <p class="text-gray-600 text-sm">MANAGER</p>
+    </div>
+  </div>
+  <p class="text-gray-700 italic">
+"Taufiq helped us redesign everything. Our new look feels fresh and professional. We saw better responses from customers right after."
+  </p>
+</div>
+                
+           <div class="bg-gray-50 p-8 rounded-xl">
+  <div class="flex items-center mb-4">
+    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+      <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+           alt="Rohit Kumar Portrait" 
+           class="w-full h-full object-cover object-center">
+    </div>
+    <div>
+      <h4 class="font-bold">Rohit Kumar</h4>
+      <p class="text-gray-600 text-sm">Marketing Head</p>
+    </div>
+  </div>
+  <p class="text-gray-700 italic">
+   "The team understood what we needed. Taufiq delivered creative designs on time and made our brand stand out."
+  </p>
+</div>
+                    
+              <div class="bg-gray-50 p-8 rounded-xl">
+  <div class="flex items-center mb-4">
+    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+      <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" 
+           alt="Amit Verma Portrait" 
+           class="w-full h-full object-cover object-center">
+    </div>
+    <div>
+      <h4 class="font-bold">Amit Verma</h4>
+      <p class="text-gray-600 text-sm">Founder, StartCraft</p>
+    </div>
+  </div>
+  <p class="text-gray-700 italic">
+"Working with Taufiq was smooth. He handled everything from logos to banners perfectly. I highly recommend him."
+  </p>
+</div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-indigo-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's <span class="text-indigo-200">Connect</span></h2>
+                    <p class="text-xl mb-8">
+                        Have a project in mind or want to discuss potential collaboration? I'd love to hear from you.
+                    </p>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-envelope text-indigo-200 mr-3 text-xl"></i>
+                            <span>wwwshaikhtaufik1@gmail.com</span>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone text-indigo-200 mr-3 text-xl"></i>
+                            <span>+91 8591530745</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-indigo-200 mr-3 text-xl"></i>
+                            <span>Mumbai, Maharastra</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Follow Me</h3>
+                        <div class="flex space-x-4">
+
+                            <a href="https://www.instagram.com/taufiq_shaikh01?igsh=a3I5cmttOXB2b3Rq" target="_blank" 
+   class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center hover:bg-indigo-400 transition duration-300">
+    <i class="fab fa-instagram"></i>
+</a>
+                      
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+               <form action="https://formspree.io/f/xqaqlnqj" method="POST" class="bg-white rounded-xl p-8 text-gray-900 shadow-xl">
+    <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+    <div class="mb-6">
+        <label for="name" class="block font-medium mb-2">Name</label>
+        <input type="text" name="name" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
+    </div>
+    <div class="mb-6">
+        <label for="email" class="block font-medium mb-2">Email</label>
+        <input type="email" name="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
+    </div>
+    <div class="mb-6">
+        <label for="project" class="block font-medium mb-2">Project Type</label>
+        <select name="project" id="project" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
+            <option value="">Select an option</option>
+            <option value="branding">Branding</option>
+            <option value="digital">Digital Design</option>
+            <option value="print">Print Design</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="mb-6">
+        <label for="message" class="block font-medium mb-2">Message</label>
+        <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg"></textarea>
+    </div>
+    <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-300">
+        Send Message
+    </button>
+</form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold tracking-tighter">TAUFIQ</a>
+                    <p class="text-gray-400 mt-2">© 2025 Taufiq Design. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                 <a href="privacy policy" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+<a href="terms of service" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+<a href="sitemap" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Work filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const workItems = document.querySelectorAll('.work-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active filter button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filter = button.dataset.filter;
+                
+                // Filter work items
+                workItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+<
