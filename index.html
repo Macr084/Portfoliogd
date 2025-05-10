@@ -194,9 +194,27 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center text-black font-medium text-lg">
-                    View Full Portfolio <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+  <button 
+    onclick="togglePortfolio()" 
+    class="inline-flex items-center text-black font-medium text-lg"
+  >
+    View Full Portfolio 
+    <i class="fas fa-arrow-right ml-2"></i>
+  </button>
+</div>
+
+<!-- Hidden Portfolio Section -->
+<div id="portfolioContent" class="hidden mt-6 text-center">
+  <!-- Replace below with your actual portfolio content -->
+  <p class="text-gray-700">Designs will be Added Here Soon :)</p>
+</div>
+
+<script>
+  function togglePortfolio() {
+    const content = document.getElementById("portfolioContent");
+    content.classList.toggle("hidden");
+  }
+</script>
             </div>
         </div>
     </section>
@@ -383,20 +401,44 @@
 
     <!-- Footer -->
     <footer class="bg-black text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <a href="#" class="text-2xl font-bold tracking-tighter">TAUFIQ</a>
-                    <p class="text-gray-400 mt-2">© 2025 Taufiq Design. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-6">
-                 <a href="privacy policy" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
-<a href="terms of service" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
-<a href="sitemap" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-6 md:mb-0">
+        <a href="#" class="text-2xl font-bold tracking-tighter">TAUFIQ</a>
+        <p class="text-gray-400 mt-2">© 2025 Taufiq Design. All rights reserved.</p>
+      </div>
+      <div class="flex space-x-6">
+        <button onclick="showContent('privacy')" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</button>
+        <button onclick="showContent('terms')" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</button>
+        <button onclick="showContent('sitemap')" class="text-gray-400 hover:text-white transition duration-300">Sitemap</button>
+      </div>
+    </div>
+
+    <!-- Content Boxes -->
+    <div id="privacy" class="hidden mt-6 text-sm text-gray-300">
+      <h2 class="text-white font-bold mb-2">Privacy Policy</h2>
+      <p>Your data is secure with us. We do not share information with third parties.</p>
+    </div>
+    <div id="terms" class="hidden mt-6 text-sm text-gray-300">
+      <h2 class="text-white font-bold mb-2">Terms of Service</h2>
+      <p>All content on this website, including designs, images, and text, is the property of Taufiq Design. You may not copy, reuse, or redistribute any content without written permission.</p>
+    </div>
+    <div id="sitemap" class="hidden mt-6 text-sm text-gray-300">
+      <h2 class="text-white font-bold mb-2">Sitemap</h2>
+      <p>Home | Portfolio | About | Contact</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function showContent(sectionId) {
+    const sections = ['privacy', 'terms', 'sitemap'];
+    sections.forEach(id => {
+      document.getElementById(id).classList.add('hidden');
+    });
+    document.getElementById(sectionId).classList.toggle('hidden');
+  }
+</script>
 
     <script>
         // Mobile menu toggle
